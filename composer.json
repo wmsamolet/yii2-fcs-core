@@ -1,0 +1,21 @@
+{
+    "name": "wmsamolet/yii2-fcs-core",
+    "description": "Flexible Customization System",
+    "type": "yii2-extension",
+    "keywords": ["Entity"," Flexible Customization System"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wmsamolet",
+            "email": "wmsamolet@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "wmsamolet\\fcs\\core\\": ""
+        }
+    }
+}
