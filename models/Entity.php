@@ -35,7 +35,7 @@ class Entity extends \wmsamolet\fcs\core\components\ActiveRecord
     {
         return [
             [['group_id', 'sort_order'], 'integer'],
-            [['title', 'class', 'table'], 'required'],
+            [['title', 'class'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
             [['title', 'class', 'table', 'categories_table', 'slug_attribute'], 'string', 'max' => 255],
         ];
