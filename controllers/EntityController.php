@@ -147,6 +147,8 @@ class EntityController extends BackendController
                         'caseSensitive' => false,
                     ]);
 
+                    $filePaths = array_slice($filePaths, 0, 10);
+
                     foreach ($filePaths as $filePath) {
                         $fileSource = file_get_contents($filePath);
                         $namespace = '\\';
@@ -163,7 +165,7 @@ class EntityController extends BackendController
                         $classNamespace = rtrim($namespace, '\\') . '\\' . $className;
 
                         if (mb_stripos(mb_strtolower($filePath), $q) !== false || mb_stripos(mb_strtolower($classNamespace), $q)) {
-                            $results[] = ['id' => $classNamespace];
+                            $results[] = ['id' => $className, 'namespace' => $classNamespace];
                         }
                     }
                 }
